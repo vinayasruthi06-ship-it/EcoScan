@@ -151,7 +151,7 @@ const handleSubmitPhoto = async () => {
       );
     }
 
-    const response = await fetch('http://localhost:3000/api/disposal', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/api/disposal`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
